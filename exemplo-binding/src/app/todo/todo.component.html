@@ -1,0 +1,6 @@
+<input type="text" [formControl]="task">
+
+<button (click)="adicionar()" [disabled]="!task.valid">Adicionar</button>
+
+<p *ngFor="let item of tarefas">{{item}}</p>
+
