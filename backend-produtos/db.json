@@ -1,0 +1,11 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "descricao": "Budweiser",
+      "marca": "Budweiser",
+	  "preco": 20.50,
+	  "validade": "2020-10-15"
+    }
+  ]
+}
