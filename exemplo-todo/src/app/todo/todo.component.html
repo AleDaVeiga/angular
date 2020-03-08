@@ -2,5 +2,19 @@
 
 <button (click)="adicionar()" [disabled]="!task.valid">Adicionar</button>
 
-<p *ngFor="let item of tarefas">{{item}}</p>
+<br>
+<br>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of tarefas">
+            <td [ngClass]="t.done ? 'azul' : 'vermelho'">{{t.description}}</td>
+        </tr>
+    </tbody>
+</table>
 
