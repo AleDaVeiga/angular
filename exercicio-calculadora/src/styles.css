@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'RobotoMono';
+    src: url('./assets/fonts/RobotoMono-Thin.ttf');
+}
+
+* {
+    font-family: 'RobotoMono', monospace;
+}
+
+:root {
+    --bg-button: #f0f0f0;
+    --border-button: solid 1px #888;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #fff;
+    background: linear-gradient(to right, rgb(83, 105, 118), rgb(41, 46, 73));
+}
