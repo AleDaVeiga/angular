@@ -14,4 +14,16 @@ export class TodosService {
   public listar(): Observable<Todo[]> {
     return this.http.get<Todo[]>(this.url);
   }
+  
+  public adicionar(tarefa: Todo): Observable<Todo> {
+    return this.http.post<Todo>(this.url, tarefa);
+  }
+  
+  public atualizar(tarefa: Todo): Observable<Todo> {
+    return this.http.put<Todo>(`${this.url}/${tarefa._id}`, tarefa);
+  }
+  
+  public remover(tarefa: Todo): Observable<Todo> {
+    return this.http.delete<Todo>(`${this.url}/${tarefa._id}`);
+  }
 }

@@ -1,20 +1,47 @@
-<input type="text" [formControl]="task">
-
-<button (click)="adicionar()" [disabled]="!task.valid">Adicionar</button>
-
-<br>
-<br>
-
-<table border="1">
-    <thead>
-        <tr>
-            <th>Descrição</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let t of tarefas">
-            <td [ngClass]="t.done ? 'azul' : 'vermelho'">{{t.description}}</td>
-        </tr>
-    </tbody>
-</table>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">Informações da tarefa</div>
+                <div class="card-body">
+                    <form [formGroup]="task">
+                        <div class="input-group">
+                            <label for="description"></label>
+                            <input type="text" name="description" formControlName="description" class="form-control">
+                            <div class="input-group-append">
+                                <button *ngIf="!task.get('_id').value" (click)="adicionar()" [disabled]="!task.valid" class="btn btn-outline-primary">Adicionar</button>
+                                <button *ngIf="task.get('_id').value"  (click)="atualizar()" [disabled]="!task.valid" class="btn btn-outline-primary">Atualizar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">Lista de tarefas</div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Descrição</th>
+                                <th scope="col" class="text-right">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let t of tarefas">
+                                <td [ngClass]="t.done ? 'azul' : 'vermelho'">{{t.description}}</td>
+                                <td class="text-right">
+                                    <button (click)="editar(t)" class="btn btn-success mr-1">Editar</button>
+                                    <button (click)="remover(t)" class="btn btn-danger">Remover</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
