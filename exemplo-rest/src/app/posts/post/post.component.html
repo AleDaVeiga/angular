@@ -1,0 +1,28 @@
+<div class="container">    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">Informações da postagem</div>
+                <div class="card-body">
+                    <form>
+                        <input type="hidden" name="id" [(ngModel)]="postagem.id" class="form-control">
+                        <div class="form-group">
+                            <label for="userId">ID Usuário</label>
+                            <input type="text" name="userId" [(ngModel)]="postagem.userId" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Título</label>
+                            <input type="text" name="title" [(ngModel)]="postagem.title" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="body">Conteúdo</label>
+                            <input type="textarea" name="body" [(ngModel)]="postagem.body" class="form-control">
+                        </div>
+                        <button *ngIf="postagem!.id == null" (click)="adicionar()" class="btn btn-outline-primary">Adicionar</button>
+                        <button *ngIf="postagem.id"  (click)="atualizar()" class="btn btn-outline-primary">Atualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
