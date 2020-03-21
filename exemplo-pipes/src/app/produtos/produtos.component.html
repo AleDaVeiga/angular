@@ -1,7 +1,10 @@
+<h1>Exponencial: {{ 2 | exponencial: 5 }}</h1>
+<h1>Moeda: {{ 5 | moeda }}</h1>
 <div *ngFor="let p of produtos">
     {{p | json}}
     <p>valor => {{ ((8 * 8) / 100 )| percent: '1.2-3' }}</p>
     <p>preco => {{p.preco | currency: 'BRL': 'symbol' }}</p>
+    <p>preco => {{p.preco | moeda: 'BRL' }}</p>
     <p>validate => {{p.validade | date:'long' | uppercase }}</p>
     <p>validate => {{p.validade | date:'fullDate' }}</p>
     <p>validate => {{p.validade | date:'dd/MM/yyyy' }}</p>
