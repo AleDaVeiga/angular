@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "exercicio-calculadora": {
+    "exemplo-calculadora": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/exercicio-calculadora",
+            "outputPath": "dist/exemplo-calculadora",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "exercicio-calculadora:build"
+            "browserTarget": "exemplo-calculadora:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "exercicio-calculadora:build:production"
+              "browserTarget": "exemplo-calculadora:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "exercicio-calculadora:build"
+            "browserTarget": "exemplo-calculadora:build"
           }
         },
         "test": {
@@ -110,15 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "exercicio-calculadora:serve"
+            "devServerTarget": "exemplo-calculadora:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "exercicio-calculadora:serve:production"
+              "devServerTarget": "exemplo-calculadora:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "exercicio-calculadora"
+    }
+  },
+  "defaultProject": "exemplo-calculadora",
+  "cli": {
+    "analytics": false
+  }
 }

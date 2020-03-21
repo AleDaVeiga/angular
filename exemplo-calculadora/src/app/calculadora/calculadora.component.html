@@ -1,0 +1,20 @@
+<div class="calculadora">
+    <div class="tela">{{ getTela() | number }}</div>
+    <button class="triplo" (click)="limparMemoria()">AC</button>
+    <button class="operacao" (click)="adicionarOperacao('/')">/</button>
+    <button (click)="adicionarDigito('7')">7</button>
+    <button (click)="adicionarDigito('8')">8</button>
+    <button (click)="adicionarDigito('9')">9</button>
+    <button class="operacao" (click)="adicionarOperacao('*')">*</button>
+    <button (click)="adicionarDigito('4')">4</button>
+    <button (click)="adicionarDigito('5')">5</button>
+    <button (click)="adicionarDigito('6')">6</button>
+    <button class="operacao" (click)="adicionarOperacao('-')">-</button>
+    <button (click)="adicionarDigito('1')">1</button>
+    <button (click)="adicionarDigito('2')">2</button>
+    <button (click)="adicionarDigito('3')">3</button>
+    <button class="operacao" (click)="adicionarOperacao('+')">+</button>
+    <button class="duplo" (click)="adicionarDigito('0')">0</button>
+    <button (click)="adicionarDigito('.')">.</button>
+    <button class="operacao" (click)="adicionarOperacao('=')">=</button>
+</div>

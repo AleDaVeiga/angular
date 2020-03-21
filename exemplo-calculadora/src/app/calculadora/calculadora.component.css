@@ -1,0 +1,45 @@
+.calculadora {
+    height: 320px;
+    width: 235px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 1fr 48px 48px 48px 48px 48px;
+}
+.tela {
+    grid-column: span 4;
+    background-color: #0004;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    font-size: 2.1em;
+    overflow: hidden;
+}
+::ng-deep button {
+    font-size: 1.4em;
+    background-color: var(--bg-button);
+    border: none;
+    border-right: var(--border-button);
+    border-bottom: var(--border-button);
+    outline: none;
+}
+::ng-deep button:active {
+    background-color: #CCC;
+}
+::ng-deep button.duplo {
+    grid-column: span 2;
+}
+::ng-deep button.triplo {
+    grid-column: span 3;
+}
+::ng-deep button.operacao {
+    background-color: #FA8231;
+    color: #FFF;
+}
+::ng-deep button.operacao:active {
+    background-color: #FA8231CC;
+}
